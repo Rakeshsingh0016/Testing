@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Name Styles Gallery - IGN Studio</title>
+    
+    <!-- External Resources -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&display=swap" rel="stylesheet"/>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Tailwind Configuration -->
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#590df2",
+                        "background-light": "#f6f5f8",
+                        "background-dark": "#161022",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.5s ease-in-out',
+                        'slide-up': 'slideUp 0.4s ease-out',
+                        'slide-down': 'slideDown 0.4s ease-out',
+                        'pulse-glow': 'pulseGlow 2s infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                        'bounce-in': 'bounceIn 0.6s ease-out',
+                        'rotate-in': 'rotateIn 0.5s ease-out',
+                        'scale-in': 'scaleIn 0.3s ease-out',
+                        'card-enter': 'cardEnter 0.5s cubic-bezier(0.34, 1.56, 0.64, 1)',
+                        'shimmer': 'shimmer 2s infinite linear',
+                        'wave': 'wave 2s ease-in-out infinite',
+                        'copy-success': 'copySuccess 0.3s ease-out',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(30px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        },
+                        slideDown: {
+                            '0%': { transform: 'translateY(-30px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        },
+                        pulseGlow: {
+                            '0%, 100%': { boxShadow: '0 0 5px rgba(89, 13, 242, 0.5)' },
+                            '50%': { boxShadow: '0 0 20px rgba(89, 13, 242, 0.8)' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-15px)' },
+                        },
+                        bounceIn: {
+                            '0%': { transform: 'scale(0.7)', opacity: '0' },
+                            '60%': { transform: 'scale(1.1)', opacity: '1' },
+                            '80%': { transform: 'scale(0.95)' },
+                            '100%': { transform: 'scale(1)', opacity: '1' },
+                        },
+                        rotateIn: {
+                            '0%': { transform: 'rotate(-180deg) scale(0.5)', opacity: '0' },
+                            '100%': { transform: 'rotate(0) scale(1)', opacity: '1' },
+                        },
+                        scaleIn: {
+                            '0%': { transform: 'scale(0)', opacity: '0' },
+                            '100%': { transform: 'scale(1)', opacity: '1' },
+                        },
+                        cardEnter: {
+                            '0%': { transform: 'translateY(50px) scale(0.8)', opacity: '0' },
+                            '70%': { transform: 'translateY(-10px) scale(1.05)', opacity: '1' },
+                            '100%': { transform: 'translateY(0) scale(1)', opacity: '1' },
+                        },
+                        shimmer: {
+                            '0%': { backgroundPosition: '-1000px 0' },
+                            '100%': { backgroundPosition: '1000px 0' },
+                        },
+                        wave: {
+                            '0%, 100%': { transform: 'rotate(0deg)' },
+                            '25%': { transform: 'rotate(10deg)' },
+                            '75%': { transform: 'rotate(-10deg)' },
+                        },
+                        copySuccess: {
+                            '0%': { transform: 'scale(1)', background: '#590df2' },
+                            '50%': { transform: 'scale(0.95)', background: '#00b894' },
+                            '100%': { transform: 'scale(1)', background: '#00b894' },
+                        }
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white min-h-screen">
+    <!-- TopNavBar -->
+    <header class="sticky top-0 z-50 border-b border-solid border-[#2e2839] bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md px-4 lg:px-20 py-3 animate-slide-down">
+        <div class="max-w-[1280px] mx-auto flex items-center justify-between whitespace-nowrap gap-4 lg:gap-8">
+            <div class="flex items-center gap-4 lg:gap-8">
+                <div class="flex items-center gap-2 lg:gap-3 text-primary animate-rotate-in">
+                    <div class="size-6 lg:size-8">
+                        <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 42.4379C4 42.4379 14.0962 36.0744 24 41.1692C35.0664 46.8624 44 42.2078 44 42.2078L44 7.01134C44 7.01134 35.068 11.6577 24.0031 5.96913C14.0971 0.876274 4 7.27094 4 7.27094L4 42.4379Z" fill="currentColor"></path>
+                        </svg>
+                    </div>
+                    <h2 class="text-slate-900 dark:text-white text-lg lg:text-xl font-bold leading-tight tracking-tight">IGN Studio</h2>
+                </div>
+                <nav class="hidden md:flex items-center gap-6 lg:gap-8">
+                    <a class="text-primary text-sm font-bold leading-normal border-b-2 border-primary pb-1 animate-scale-in" href="#">Gallery</a>
+                    <a class="text-slate-600 dark:text-[#a69cba] text-sm font-medium leading-normal hover:text-primary transition-all duration-300 hover:scale-105" href="#">My Designs</a>
+                    <a class="text-slate-600 dark:text-[#a69cba] text-sm font-medium leading-normal hover:text-primary transition-all duration-300 hover:scale-105" href="#">Tutorials</a>
+                    <a class="text-slate-600 dark:text-[#a69cba] text-sm font-medium leading-normal hover:text-primary transition-all duration-300 hover:scale-105" href="#">Pro Symbols</a>
+                </nav>
+            </div>
+            <div class="flex flex-1 justify-end gap-3 lg:gap-4 items-center">
+                <label class="hidden sm:flex flex-col min-w-32 lg:min-w-40 !h-9 lg:!h-10 max-w-48 lg:max-w-64 animate-scale-in">
+                    <div class="flex w-full flex-1 items-stretch rounded-lg h-full overflow-hidden bg-slate-200 dark:bg-[#2e2839]">
+                        <div class="text-slate-500 dark:text-[#a69cba] flex items-center justify-center pl-3 lg:pl-4">
+                            <span class="material-symbols-outlined text-[18px] lg:text-[20px]">search</span>
+                        </div>
+                        <input id="searchInput" class="w-full border-none bg-transparent focus:ring-0 text-slate-900 dark:text-white placeholder:text-slate-500 dark:placeholder:text-[#a69cba] px-2 lg:px-3 text-sm font-normal" placeholder="Search styles..." value=""/>
+                    </div>
+                </label>
+                <button class="flex items-center justify-center rounded-lg h-9 lg:h-10 px-4 lg:px-5 bg-primary text-white text-sm font-bold hover:bg-primary/90 transition-all shadow-lg shadow-primary/20 hover:scale-105 hover:animate-pulse-glow animate-bounce-in" id="refreshBtn">
+                    <span class="truncate text-xs lg:text-sm">Refresh</span>
+                </button>
+                <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-8 lg:size-10 border-2 border-primary/30 animate-float" data-alt="Avatar of a pro gamer with neon headphones" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCqWet3JTMfCX23YObnWYUXL_9itNTiggye-jAWZt9XsjOVto9FRgNdd72uUCPGG5KWw_OyTkfSG4PWh4ihqC955lDKyAn95ByD9gJSfLhffKm8qxHkQgRHM8n7Ay_4c-1gjbIfHKit_LQV4yezKc_xgznlVA42lJE92uwytX9Tpgejx3-duZgVhyymgwwLTt4ohMRwOPLvSrCiuELeEjIH9lOVZTch7NBHZ4XQBRpPBb50eAiWLTzajjCUBd5YolRbcdzN2D5BKQ");'></div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-[1280px] mx-auto px-4 lg:px-20 py-6 lg:py-10">
+        <!-- Headline and Meta -->
+        <div class="flex flex-col items-center mb-8 lg:mb-12 animate-fade-in mobile-p-4">
+            <h1 class="text-slate-900 dark:text-white tracking-tight text-2xl lg:text-4xl md:text-5xl font-bold leading-tight text-center pb-3 lg:pb-4 mobile-text-center gradient-text">
+                Name Styles Gallery
+            </h1>
+            <p class="text-slate-600 dark:text-[#a69cba] text-base lg:text-lg font-normal leading-normal text-center max-w-2xl mobile-text-center animate-slide-up">
+                Browse and customize 360+ IGN styles for your favorite games. Type your name below to see instant previews.
+            </p>
+        </div>
+
+        <!-- Live Preview Input -->
+        <div class="flex justify-center mb-8 lg:mb-12 animate-slide-up mobile-p-4" style="animation-delay: 0.1s;">
+            <div class="w-full max-w-2xl glass-panel p-1 rounded-xl border border-primary/20 shadow-2xl animate-pulse-glow">
+                <div class="flex flex-col sm:flex-row items-stretch gap-2 p-2">
+                    <div class="flex-1 relative flex items-center">
+                        <div class="absolute left-3 lg:left-4 text-primary animate-wave">
+                            <span class="material-symbols-outlined text-lg lg:text-xl">edit</span>
+                        </div>
+                        <input id="nameInput" class="form-input w-full rounded-lg text-slate-900 dark:text-white focus:ring-2 focus:ring-primary border-none bg-slate-100 dark:bg-[#1f1b27] h-12 lg:h-14 pl-10 lg:pl-12 pr-3 lg:pr-4 text-lg lg:text-xl font-bold tracking-wider placeholder:text-slate-400 dark:placeholder:text-[#a69cba]/50 transition-all hover:scale-[1.02]" placeholder="Type your name..." value="SHADOW"/>
+                    </div>
+                    <button id="applyAllBtn" class="bg-primary hover:bg-primary/90 text-white px-6 lg:px-8 rounded-lg font-bold text-base lg:text-lg transition-all flex items-center justify-center gap-2 py-3 lg:py-0 hover:scale-105 hover:animate-pulse-glow animate-bounce-in" style="animation-delay: 0.2s;">
+                        <span class="material-symbols-outlined text-lg lg:text-xl animate-wave">auto_fix_high</span>
+                        <span class="hidden sm:inline">Apply All</span>
+                        <span class="sm:hidden">Apply</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Stats Bar -->
+        <div class="glass-panel rounded-xl p-4 mb-6 lg:mb-8 animate-slide-up mobile-p-4" style="animation-delay: 0.2s;">
+            <div class="flex flex-wrap justify-center gap-4 lg:gap-6">
+                <!-- Total Styles -->
+                <div class="flex items-center gap-2 lg:gap-3 animate-scale-in" style="animation-delay: 0.3s;">
+                    <div class="size-10 lg:size-12 rounded-lg bg-primary/10 flex items-center justify-center hover:scale-110 transition-all duration-300 animate-float">
+                        <span class="material-symbols-outlined text-primary text-xl lg:text-2xl animate-wave">style</span>
+                    </div>
+                    <div>
+                        <div class="text-xl lg:text-2xl font-bold text-white gradient-text">360</div>
+                        <div class="text-[#a69cba] text-xs lg:text-sm">Total Styles</div>
+                    </div>
+                </div>
+                <!-- Styles in This Page -->
+                <div class="flex items-center gap-2 lg:gap-3 animate-scale-in" style="animation-delay: 0.4s;">
+                    <div class="size-10 lg:size-12 rounded-lg bg-green-500/10 flex items-center justify-center hover:scale-110 transition-all duration-300">
+                        <span class="material-symbols-outlined text-green-500 text-xl lg:text-2xl">category</span>
+                    </div>
+                    <div>
+                        <div class="text-xl lg:text-2xl font-bold text-white gradient-text" id="currentStyles">50</div>
+                        <div class="text-[#a69cba] text-xs lg:text-sm">Styles in This Page</div>
+                    </div>
+                </div>
+                <!-- Current Page -->
+                <div class="flex items-center gap-2 lg:gap-3 animate-scale-in" style="animation-delay: 0.5s;">
+                    <div class="size-10 lg:size-12 rounded-lg bg-purple-500/10 flex items-center justify-center hover:scale-110 transition-all duration-300">
+                        <span class="material-symbols-outlined text-purple-500 text-xl lg:text-2xl">bolt</span>
+                    </div>
+                    <div>
+                        <div class="text-xl lg:text-2xl font-bold text-white gradient-text" id="currentPage">1</div>
+                        <div class="text-[#a69cba] text-xs lg:text-sm">Current Page</div>
+                    </div>
+                </div>
+                <!-- Total Pages -->
+                <div class="flex items-center gap-2 lg:gap-3 animate-scale-in" style="animation-delay: 0.6s;">
+                    <div class="size-10 lg:size-12 rounded-lg bg-amber-500/10 flex items-center justify-center hover:scale-110 transition-all duration-300">
+                        <span class="material-symbols-outlined text-amber-500 text-xl lg:text-2xl animate-wave">auto_awesome</span>
+                    </div>
+                    <div>
+                        <div class="text-xl lg:text-2xl font-bold text-white gradient-text" id="totalPages">7</div>
+                        <div class="text-[#a69cba] text-xs lg:text-sm">Total Pages</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pagination Controls -->
+        <div class="mb-6 lg:mb-10 animate-slide-up mobile-p-4" style="animation-delay: 0.3s;">
+            <div class="glass-panel rounded-xl p-3 lg:p-4 border border-primary/10">
+                <div class="flex flex-col lg:flex-row items-center justify-between gap-4">
+                    <div class="w-full lg:w-auto">
+                        <h3 class="text-white font-bold text-lg lg:text-xl mb-2 lg:mb-0 text-center lg:text-left gradient-text">Page Navigation</h3>
+                        <p class="text-[#a69cba] text-sm text-center lg:text-left animate-pulse">Browse through all 7 pages of styles</p>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <button id="prevPage" class="p-2 rounded-lg bg-[#2e2839] hover:bg-primary/20 disabled:opacity-50 disabled:cursor-not-allowed transition-all hover:scale-110 animate-scale-in">
+                            <span class="material-symbols-outlined text-white">chevron_left</span>
+                        </button>
+                        <div class="flex gap-1 overflow-x-auto no-scrollbar max-w-[280px] lg:max-w-none">
+                            <button class="p-2 px-3 lg:px-4 rounded-lg bg-primary text-white font-bold text-xs lg:text-sm page-btn active hover:scale-105 transition-all animate-bounce-in" style="animation-delay: 0.1s;" data-page="1">1</button>
+                            <button class="p-2 px-3 lg:px-4 rounded-lg bg-[#2e2839] hover:bg-primary/20 text-white font-bold text-xs lg:text-sm page-btn hover:scale-105 transition-all animate-bounce-in" style="animation-delay: 0.2s;" data-page="2">2</button>
+                            <button class="p-2 px-3 lg:px-4 rounded-lg bg-[#2e2839] hover:bg-primary/20 text-white font-bold text-xs lg:text-sm page-btn hover:scale-105 transition-all animate-bounce-in" style="animation-delay: 0.3s;" data-page="3">3</button>
+                            <button class="p-2 px-3 lg:px-4 rounded-lg bg-[#2e2839] hover:bg-primary/20 text-white font-bold text-xs lg:text-sm page-btn hover:scale-105 transition-all animate-bounce-in" style="animation-delay: 0.4s;" data-page="4">4</button>
+                            <button class="p-2 px-3 lg:px-4 rounded-lg bg-[#2e2839] hover:bg-primary/20 text-white font-bold text-xs lg:text-sm page-btn hover:scale-105 transition-all animate-bounce-in" style="animation-delay: 0.5s;" data-page="5">5</button>
+                            <button class="p-2 px-3 lg:px-4 rounded-lg bg-[#2e2839] hover:bg-primary/20 text-white font-bold text-xs lg:text-sm page-btn hover:scale-105 transition-all animate-bounce-in" style="animation-delay: 0.6s;" data-page="6">6</button>
+                            <button class="p-2 px-3 lg:px-4 rounded-lg bg-[#2e2839] hover:bg-primary/20 text-white font-bold text-xs lg:text-sm page-btn hover:scale-105 transition-all animate-bounce-in" style="animation-delay: 0.7s;" data-page="7">7</button>
+                        </div>
+                        <button id="nextPage" class="p-2 rounded-lg bg-[#2e2839] hover:bg-primary/20 disabled:opacity-50 disabled:cursor-not-allowed transition-all hover:scale-110 animate-scale-in">
+                            <span class="material-symbols-outlined text-white">chevron_right</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Gallery Grid -->
+        <div id="stylesGrid" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 lg:gap-6 mobile-grid">
+            <!-- Styles will be dynamically generated here -->
+        </div>
+
+        <!-- Pagination/Load More -->
+        <div class="mt-10 lg:mt-16 flex justify-center animate-fade-in mobile-p-4" style="animation-delay: 0.4s;">
+            <button id="loadMoreBtn" class="flex items-center gap-2 lg:gap-3 px-8 lg:px-10 py-3 lg:py-4 bg-slate-200 dark:bg-[#1f1b27] border border-primary/30 rounded-xl text-slate-900 dark:text-white font-bold hover:bg-slate-300 dark:hover:bg-[#2e2839] transition-all hover:scale-105 text-sm lg:text-base hover:animate-pulse-glow animate-float">
+                Load Next Page
+                <span class="material-symbols-outlined animate-wave">expand_more</span>
+            </button>
+        </div>
+
+        <!-- Page Info -->
+        <div class="mt-8 lg:mt-12 glass-panel rounded-xl p-4 lg:p-6 animate-slide-up mobile-p-4 border border-primary/10" style="animation-delay: 0.5s;">
+            <div class="flex flex-col lg:flex-row items-center justify-between gap-4">
+                <div>
+                    <h3 class="text-white font-bold text-lg lg:text-xl mb-2 gradient-text">Currently Viewing</h3>
+                    <p class="text-[#a69cba] text-sm lg:text-base animate-pulse">
+                        Page <span class="text-primary font-bold animate-wave" id="pageNumberDisplay">1</span> • 
+                        <span class="text-primary font-bold" id="stylesRangeDisplay">1-50</span> of 360 styles
+                    </p>
+                </div>
+                <div class="flex items-center gap-3">
+                    <div class="flex items-center gap-2 animate-scale-in">
+                        <span class="material-symbols-outlined text-green-500 text-lg animate-wave">done</span>
+                        <span class="text-white text-sm lg:text-base">Page Loaded Successfully</span>
+                    </div>
+                    <button id="scrollToTop" class="p-2 rounded-lg bg-primary/20 hover:bg-primary/30 text-primary transition-all hover:scale-110 hover:animate-wave">
+                        <span class="material-symbols-outlined">arrow_upward</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="fixed bottom-4 lg:bottom-6 right-4 lg:right-6 glass-panel border border-primary/30 rounded-xl p-3 lg:p-4 max-w-xs lg:max-w-sm transform translate-x-full transition-all duration-300 z-50 shadow-2xl">
+        <div class="flex items-center gap-2 lg:gap-3">
+            <div class="size-8 lg:size-10 rounded-lg bg-primary/20 flex items-center justify-center animate-rotate-in">
+                <span class="material-symbols-outlined text-primary text-lg lg:text-xl">check_circle</span>
+            </div>
+            <div class="animate-slide-up">
+                <div class="font-bold text-white text-xs lg:text-sm gradient-text" id="toastTitle">Copied!</div>
+                <div class="text-[#a69cba] text-xs" id="toastMessage">Style copied to clipboard</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="border-t border-[#2e2839] mt-10 lg:mt-20 py-6 lg:py-10 px-4 lg:px-20 text-center text-[#a69cba] text-sm animate-fade-in">
+        <div class="max-w-[1280px] mx-auto flex flex-col md:flex-row justify-between items-center gap-4 lg:gap-6">
+            <div class="flex items-center gap-2 animate-rotate-in">
+                <div class="size-5 lg:size-6 text-primary">
+                    <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 42.4379C4 42.4379 14.0962 36.0744 24 41.1692C35.0664 46.8624 44 42.2078 44 42.2078L44 7.01134C44 7.01134 35.068 11.6577 24.0031 5.96913C14.0971 0.876274 4 7.27094 4 7.27094L4 42.4379Z" fill="currentColor"></path>
+                    </svg>
+                </div>
+                <span class="font-bold text-white text-sm lg:text-base">IGN Studio</span>
+            </div>
+            <div class="flex gap-4 lg:gap-8 flex-wrap justify-center animate-scale-in">
+                <a class="hover:text-primary transition-all hover:scale-105" href="#">Privacy Policy</a>
+                <a class="hover:text-primary transition-all hover:scale-105" href="#">Terms of Service</a>
+                <a class="hover:text-primary transition-all hover:scale-105" href="#">Contact Us</a>
+            </div>
+            <p class="text-xs lg:text-sm mt-2 lg:mt-0 animate-slide-up">© 2024 IGN Studio. Elevate your presence.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="name-generator.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
